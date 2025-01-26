@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Carousel</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="carousel.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .product-detail {
+            padding: 20px;
+        }
+
+
+        .carousel h2 {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: left;
+            color: #333;
+        }
+
+
+        .carousel {
+            margin-top: 20px;
+            padding: 0 15px;
+
+        }
+
+
+        .carousel-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .carousel-container {
+            display: flex;
+            transition: transform 0.3s ease;
+        }
+
+        .carousel-item {
+            position: relative;
+
+        }
+
+        .favorite-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: transparent;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #ddd;
+
+            transition: color 0.3s ease;
+        }
+
+        .favorite-btn.favorited {
+            color: red;
+
+        }
+
+        .favorite-btn:hover {
+            color: red;
+
+        }
+
+        .carousel-item img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #333;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .carousel-btn.left {
+            left: 10px;
+        }
+
+        .carousel-btn.right {
+            right: 10px;
+        }
+
+        .carousel-item p {
+            margin: 5px 0;
+        }
+
+
+        .carousel-item p:first-of-type {
+            height: 40px;
+
+            overflow: hidden;
+
+            text-overflow: ellipsis;
+
+            white-space: nowrap;
+
+        }
+
+
+        .carousel-item p:last-of-type {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+
+        .favorite-btn {
+            background: transparent;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        .favorite-btn.favorited {
+            color: blue;
+        }
+
+
+        @media (max-width: 1200px) {
+            .carousel-item {
+                flex: 0 0 calc(100% / 4.5);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .carousel-item {
+                flex: 0 0 calc(100% / 3.5);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .carousel-item {
+                flex: 0 0 calc(100% / 2.5);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="product-detail">
+        <h1>Ürün Detayları</h1>
+    </div>
+</body>
+
+</html>
